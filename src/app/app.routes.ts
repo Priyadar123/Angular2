@@ -6,9 +6,11 @@ import { RepoBrowserComponent } from './github/repo-browser/repo-browser.compone
 import { RepoListComponent } from './github/repo-list/repo-list.component';
 import { RepoDetailComponent } from './github/repo-detail/repo-detail.component';
 import { ContactComponent } from './contact/contact.component';
+import { SortTableComponent } from './sort-table/sort-table.component';
+import { GroupTableComponent } from './group-table/group-table.component';
 
 export const rootRouterConfig: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'sort-table', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'github', component: RepoBrowserComponent,
@@ -21,6 +23,8 @@ export const rootRouterConfig: Routes = [
         ]
       }]
   },
-  { path: 'contact', component: ContactComponent }
+  { path: 'contact', component: ContactComponent },
+  { path: 'sort-table', component: SortTableComponent },
+  { path: 'group-table', component: GroupTableComponent }
 ];
 

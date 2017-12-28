@@ -1,0 +1,15 @@
+<div align="center">
+	<h1>Sort Table</h1>
+	<table *ngIf="isDataAvailable">
+		<tr>
+			<th class="cursorPointer" (click)="sortData('name')">Name</th>
+			<th class="cursorPointer" (click)="sortData('category')">Category</th>
+			<th class="cursorPointer" (click)="sortData('amount')">Amount</th>
+		</tr>
+		<tr *ngFor="let data of data | orderBy: {property: columnName, sort: sortDirection}">
+			<td>{{data.name}}</td>
+			<td>{{data.category}}</td>
+			<td>{{data.amount}}</td>
+		</tr>
+	</table>
+</div>

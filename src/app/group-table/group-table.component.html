@@ -1,0 +1,18 @@
+<div align="center">
+	<h1>Group table</h1>
+	<!-- loads table only if the data is available-->
+	<table *ngIf="isDataAvailable">
+		<tr>
+			<th>Name</th>
+			<th>C1</th>
+			<th>C2</th>
+			<th>C3</th>
+		</tr>
+		<tr *ngFor="let data of groupedData">
+			<td>{{data.name}}</td>
+			<td>{{data.C1}}</td>
+			<td>{{data.C2}}</td>
+			<td>{{data.C3}}</td>
+		</tr>
+	</table>
+</div>
